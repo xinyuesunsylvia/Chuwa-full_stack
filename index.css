@@ -15,7 +15,7 @@ body {
 }
 
 /* class */
-.table {
+.table-container {
   font-family: arial, sans-serif;
   margin: 1em;
   border-collapse: collapse;
