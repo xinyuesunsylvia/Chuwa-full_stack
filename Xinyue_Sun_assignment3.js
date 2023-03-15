@@ -55,6 +55,7 @@ newThead.appendChild(newHeader);
 newTable.appendChild(newThead);
 
 const newTbody = document.createElement("tbody");
+newTbody.classList.add("new_tbody");
 
 tableInfo.tableContent.forEach((ele) => {
   const newRow = document.createElement("tr");
@@ -75,6 +76,7 @@ tableContainer.appendChild(newTable);
 // Q1.b
 const formContainer = document.querySelector(".form-container");
 
+// create
 const form = document.createElement("form");
 
 const nameInput = document.createElement("input");
@@ -115,7 +117,9 @@ form.addEventListener("submit", (event) => {
   const address = addressInput.value;
 
   // Add the input values to the table
-  const table = document.querySelector(".new_table");
+
+  // const table = document.querySelector(".new_table");
+  const tbody = document.querySelector(".new_tbody");
 
   const row = document.createElement("tr");
   const cells = [name, age, phone, address];
@@ -124,7 +128,8 @@ form.addEventListener("submit", (event) => {
     cell.innerText = cellValue;
     row.appendChild(cell);
   });
-  table.appendChild(row);
+  tbody.appendChild(row);
+  // table.appendChild(row);
 
   // Clear the input fields
   nameInput.value = "";
